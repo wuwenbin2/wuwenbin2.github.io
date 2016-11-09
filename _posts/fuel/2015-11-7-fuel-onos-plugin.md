@@ -31,7 +31,7 @@ git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
 
 * Preparing an environment for plugin development by three easy steps:  
 
-A. Install the standard Linux development tools.  
+ - Install the standard Linux development tools.  
 
 For Ubuntu 14.04 LTS, run: 
     
@@ -44,13 +44,13 @@ For Centos 6.5, run:
         yum install createrepo rpm rpm-build dpkg-devel
 ```
 
-B. Install the Fuel Plugin Builder. To do that, you should first get pip:  
+ - Install the Fuel Plugin Builder. To do that, you should first get pip:  
 
 ```bash:
         easy_install pip
 ```
 
-C. Then, install Fuel Plugin Builder (fpb) itself:  
+ - Then, install Fuel Plugin Builder (fpb) itself:  
 
 ```bash:
         pip install fuel-plugin-builder
@@ -60,11 +60,11 @@ C. Then, install Fuel Plugin Builder (fpb) itself:
 
 ```bash:
         fpb --build fuel-plugin-onos/
- ```
+```
 
 * The onos rpm will be built in the folder of fuel-plugin-onos.  
 
-* Install the onos plugin:   
+* Install the onos plugin:  
 
 ```bash:
         fuel plugins --install onos*.rpm
