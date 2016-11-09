@@ -23,6 +23,7 @@ Service quagga status
 quagga支持vpnv4，不支持ls（link state）属性。
 
 登录控制台：
+
 ```Bash:
 telnet localhost 2605
 ```
@@ -131,6 +132,7 @@ Read thread: on  Write thread: off 
 ```
 
 ##Bgp.conf
+
 ```Bash:
 ! -*- bgp -*-
 !
