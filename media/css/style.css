@@ -16,7 +16,7 @@ a {
     color: #55bbee; }
 
 * {
-  margin: 0;
+  margin: 10;
   padding: 0; }
 
 body {
@@ -41,7 +41,7 @@ ol, ul {
   margin: 2em 0 1em 0; }
 
 #header {
-  width: 680px;
+  width: 1000px;
   margin: 0 auto; }
   #header a {
     color: #999999;
@@ -61,7 +61,7 @@ ol, ul {
       text-transform: uppercase; }
 
 #content {
-  width: 680px;
+  width: 1000px;
   margin: 0 auto;
   font-size: 1.1em;
   line-height: 1.7em; }
