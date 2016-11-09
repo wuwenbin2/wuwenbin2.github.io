@@ -42,13 +42,13 @@ docker attach
 
 #Q&A
 
-+ Unable to download docker image
++ Unable to download docker image([Reference](http://dockerpool.com/article/1413082493) )
 
 ```Bash:
 sudo docker pull dl.dockerpool.com:5000/ubuntu:14.04
 sudo docker pull dl.dockerpool.com:5000/ubuntu:14.04
 ```
-[Reference](http://dockerpool.com/article/1413082493) 
+
 
 
 + Use proxy and dns
@@ -59,7 +59,7 @@ http_proxy=111.161.126.101:80 docker -d --dns=114.114.114.114 &
 
 + Use nsenter to login container
 
-- Install 
+ - Install 
 
 ```Bash:
 cd /tmp
@@ -71,8 +71,8 @@ make nsenter
 cp nsenter /usr/local/bin
 ```
 
-- docker-enter.sh
-
+ - Docker-enter.sh
+ 
 ```Bash:
 #!/bin/sh
 
