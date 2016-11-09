@@ -25,14 +25,13 @@ This plugin will install [ Open Network Operating System (ONOS) controller](http
 
 ##ONOS plugin installation##
 
-
-* Log in Fuel Master and clone GIT repository of fuel-plugin-onos from openstack:  
+* Log in Fuel Master and clone GIT repository of fuel-plugin-onos from openstack:   
 
         git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
 
 * Preparing an environment for plugin development by three easy steps:  
 
-    A. Install the standard Linux development tools.  
+    A. Install the standard Linux development tools.   
 
     For Ubuntu 14.04 LTS, run:
 
@@ -47,7 +46,6 @@ This plugin will install [ Open Network Operating System (ONOS) controller](http
         easy_install pip
 
     C. Then, install Fuel Plugin Builder (fpb) itself:  
-
 
         pip install fuel-plugin-builder
 
@@ -87,8 +85,6 @@ All described actions below are described from a Fuel GUI provisioning perspecti
 
 2. Select 'onos plugin' on Settings tab. If you want to try sfc functions, select SFC features as well.
 
-     onos plugin
-
 3. Select a node with role 'onos'
 
 4. Click 'Deploy changes' to enable nodes with ONOSFW.
@@ -107,7 +103,6 @@ Notice: In case of version problems, the onos rpm uses jdk and onos packages tha
 ###Testing###
 
 1. Web UI is recommended for ONOS controller with tuitive information of topo, devices and etc.  
-
 For that purpose, IP address of horizon should be ready, which can be found in fuel master after successful deployment. The web will run into the log page after inputing the path, username and password are both 'karaf'. Now enjot ONOS!
 
         Web UI: http://horizon_ip:8181/onos/ui
