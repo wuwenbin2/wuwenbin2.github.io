@@ -25,11 +25,11 @@ This plugin will install [ Open Network Operating System (ONOS) controller](http
 
 ##ONOS plugin installation##
 
-* Log in Fuel Master and clone GIT repository of fuel-plugin-onos from openstack:   
+* Log in Fuel Master and clone GIT repository of fuel-plugin-onos from openstack:    
 
         git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
 
-* Preparing an environment for plugin development by three easy steps:  
+* Preparing an environment for plugin development by three easy steps:   
 
     A. Install the standard Linux development tools.   
 
@@ -41,25 +41,25 @@ This plugin will install [ Open Network Operating System (ONOS) controller](http
 
         yum install createrepo rpm rpm-build dpkg-devel
 
-    B. Install the Fuel Plugin Builder. To do that, you should first get pip:  
+    B. Install the Fuel Plugin Builder. To do that, you should first get pip:   
 
         easy_install pip
 
-    C. Then, install Fuel Plugin Builder (fpb) itself:  
+    C. Then, install Fuel Plugin Builder (fpb) itself:   
 
         pip install fuel-plugin-builder
 
-* Build ONOS plugin for fuel:  
+* Build ONOS plugin for fuel:   
 
         fpb --build fuel-plugin-onos/
 
-+ The onos rpm will be built in the folder of fuel-plugin-onos.  
++ The onos rpm will be built in the folder of fuel-plugin-onos.   
 
-+ Install the onos plugin:  
++ Install the onos plugin:   
 
         fuel plugins --install onos*.rpm
 
-+ Check if you successfully install the plugin:  
++ Check if you successfully install the plugin:   
 
         fuel plugins
 
@@ -82,14 +82,9 @@ Notice: Step 1-4 aren't limitted with the environment of master, you can also ma
 All described actions below are described from a Fuel GUI provisioning perspective.
 
 1. Create a new environment.
-
 2. Select 'onos plugin' on Settings tab. If you want to try sfc functions, select SFC features as well.
-
 3. Select a node with role 'onos'
-
 4. Click 'Deploy changes' to enable nodes with ONOSFW.
-
-
 
 ###Dependencies###
 
