@@ -24,7 +24,8 @@ docker pull opnfv/functest
 ```
 
 ###Fuel
-1. if it is virtual deployment  
+
+* if it is virtual deployment  
 
 ```bash:
 sudo ip link add name fuel1.101 link fuel1 type vlan id 101
@@ -32,13 +33,13 @@ sudo ip link set fuel1.101 up
 sudo ip addr add 192.168.0.250/24 dev fuel1.101
 ```
 
-2. launch container  
+* launch container  
 
 ```bash:
 sudo docker run --privileged=true -id -e INSTALLER_TYPE=fuel -e INSTALLER_IP=10.20.0.2     -e NODE_NAME=ericsson-pod2 -e DEPLOY_SCENARIO=os-onos-sfc-ha     -e BUILD_TAG=jenkins-functest-fuel-baremetal-daily-master-66 -e CI_DEBUG=false -v /home/jenkins/opnfv/functest/results/master:/home/opnfv/functest/results   opnfv/functest:latest /bin/bash
 ```
 
-3. check  
+* check  
 
 ```bash:
 docker exec container_id ping 172.16.0.3
@@ -126,8 +127,11 @@ docker exec 759ff2468d python /home/opnfv/repos/functest/ci/run_tests.py -t temp
 
 
 + install docker  
+
+```bash:
 For ubuntu: apt-get install docker.io  
 For centos(apex): yum -y install docker  
+```
 
 + pull docker image  
 
