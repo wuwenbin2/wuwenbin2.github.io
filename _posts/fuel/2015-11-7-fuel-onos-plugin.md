@@ -29,31 +29,39 @@ This plugin will install [ Open Network Operating System (ONOS) controller](http
 git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
 ```
 
-* Preparing an environment for plugin development by three easy steps:   
+* Preparing an environment for plugin development by three easy steps:  
 
-    A. Install the standard Linux development tools.   
+    A. Install the standard Linux development tools.  
 
-    For Ubuntu 14.04 LTS, run:
+    For Ubuntu 14.04 LTS, run: 
     
+```bash:
         sudo apt-get install createrepo rpm dpkg-dev
-        
+```
+
     For Centos 6.5, run:
 
+```bash:
         yum install createrepo rpm rpm-build dpkg-devel
+```
 
     B. Install the Fuel Plugin Builder. To do that, you should first get pip:  
 
+```bash:
         easy_install pip
-        
+```
+
     C. Then, install Fuel Plugin Builder (fpb) itself:  
-    
+
+```bash:
         pip install fuel-plugin-builder
+```
 
 * Build ONOS plugin for fuel:  
 
 ```bash:
         fpb --build fuel-plugin-onos/
-```
+ ```
 
 + The onos rpm will be built in the folder of fuel-plugin-onos.  
 
