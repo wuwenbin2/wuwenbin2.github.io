@@ -1,0 +1,4 @@
+markdown: rdiscount
+highlighter: true
+permalink: /:year/:month/:day/:title.html
+name: My simple world
