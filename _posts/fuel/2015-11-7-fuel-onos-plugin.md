@@ -31,27 +31,26 @@ git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
 
 * Preparing an environment for plugin development by three easy steps:  
 
-    A. Install the standard Linux development tools.  
+A. Install the standard Linux development tools.  
 
-    For Ubuntu 14.04 LTS, run: 
+For Ubuntu 14.04 LTS, run: 
     
 ```bash:
         sudo apt-get install createrepo rpm dpkg-dev
 ```
-
-    For Centos 6.5, run:
+For Centos 6.5, run:
 
 ```bash:
         yum install createrepo rpm rpm-build dpkg-devel
 ```
 
-    B. Install the Fuel Plugin Builder. To do that, you should first get pip:  
+B. Install the Fuel Plugin Builder. To do that, you should first get pip:  
 
 ```bash:
         easy_install pip
 ```
 
-    C. Then, install Fuel Plugin Builder (fpb) itself:  
+C. Then, install Fuel Plugin Builder (fpb) itself:  
 
 ```bash:
         pip install fuel-plugin-builder
@@ -63,15 +62,15 @@ git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
         fpb --build fuel-plugin-onos/
  ```
 
-+ The onos rpm will be built in the folder of fuel-plugin-onos.  
+* The onos rpm will be built in the folder of fuel-plugin-onos.  
 
-+ Install the onos plugin:   
+* Install the onos plugin:   
 
 ```bash:
         fuel plugins --install onos*.rpm
 ```
 
-+ Check if you successfully install the plugin:  
+* Check if you successfully install the plugin:  
 
         fuel plugins
 
@@ -79,8 +78,7 @@ git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
         ---|--------|---------|----------------
         1  | onos   | 0.9.0   | 4.0.0
 
-     
-+ Check if the plugin is enabled on the settings table.  
+* Check if the plugin is enabled on the settings table.  
 
 Notice: Step 1-4 aren't limitted with the environment of master, you can also make it everywhere, but after the rpm is made, you should copy it to the master. In addition, the info of a new plugin at settings table can only be ready  when a new environment is created.
 
@@ -109,13 +107,13 @@ Notice: In case of version problems, the onos rpm uses jdk and onos packages tha
 
 ###Testing###
 
-+ Web UI is recommended for ONOS controller with tuitive information of topo, devices and etc.   
-    For that purpose, IP address of horizon should be ready, which can be found in fuel master after successful deployment. The web will run into the log page after inputing the path, username and password are both 'karaf'. Now enjot ONOS!
++ Web UI is recommended for ONOS controller with tuitive information of topo, devices and etc.
+For that purpose, IP address of horizon should be ready, which can be found in fuel master after successful deployment. The web will run into the log page after inputing the path, username and password are both 'karaf'. Now enjot ONOS!
 
         Web UI: http://horizon_ip:8181/onos/ui
 
 + CLI is capable of more diverse functionality by running /opt/onos/bin/onos. More about CLI can be found in [The ONOS CLI](
-https://wiki.onosproject.org/display/ONOS/The+ONOS+CLI).  
+https://wiki.onosproject.org/display/ONOS/The+ONOS+CLI).
 
 ##Getting Involved##
 
