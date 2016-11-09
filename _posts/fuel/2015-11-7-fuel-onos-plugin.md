@@ -5,8 +5,6 @@ description: "readme"
 category: tech
 tags: [opnfv]
 ---
-{% include JB/setup %}
-
 
 ##Brief##
 
@@ -25,7 +23,7 @@ This plugin will install [ Open Network Operating System (ONOS) controller](http
 
 ##ONOS plugin installation##
 
-* Log in Fuel Master and clone GIT repository of fuel-plugin-onos from openstack:   
+* Log in Fuel Master and clone GIT repository of fuel-plugin-onos from openstack:  
 
 ```bash:
 git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
@@ -43,7 +41,7 @@ git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
 
         yum install createrepo rpm rpm-build dpkg-devel
 
-    B. Install the Fuel Plugin Builder. To do that, you should first get pip: 
+    B. Install the Fuel Plugin Builder. To do that, you should first get pip:  
 
         easy_install pip
         
@@ -51,20 +49,21 @@ git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
     
         pip install fuel-plugin-builder
 
-* Build ONOS plugin for fuel:   
+* Build ONOS plugin for fuel:  
 
 ```bash:
         fpb --build fuel-plugin-onos/
 ```
 
-+ The onos rpm will be built in the folder of fuel-plugin-onos.   
++ The onos rpm will be built in the folder of fuel-plugin-onos.  
 
 + Install the onos plugin:   
 
 ```bash:
         fuel plugins --install onos*.rpm
 ```
-+ Check if you successfully install the plugin:   
+
++ Check if you successfully install the plugin:  
 
         fuel plugins
 
@@ -102,8 +101,8 @@ Notice: In case of version problems, the onos rpm uses jdk and onos packages tha
 
 ###Testing###
 
-+ Web UI is recommended for ONOS controller with tuitive information of topo, devices and etc.  
-For that purpose, IP address of horizon should be ready, which can be found in fuel master after successful deployment. The web will run into the log page after inputing the path, username and password are both 'karaf'. Now enjot ONOS!
++ Web UI is recommended for ONOS controller with tuitive information of topo, devices and etc.   
+    For that purpose, IP address of horizon should be ready, which can be found in fuel master after successful deployment. The web will run into the log page after inputing the path, username and password are both 'karaf'. Now enjot ONOS!
 
         Web UI: http://horizon_ip:8181/onos/ui
 
