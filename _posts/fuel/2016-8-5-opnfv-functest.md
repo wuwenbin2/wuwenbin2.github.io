@@ -39,6 +39,7 @@ sudo docker run --privileged=true -id -e INSTALLER_TYPE=fuel -e INSTALLER_IP=10.
 ```
 
 3.check
+
 ```bash:
 docker exec container_id ping 172.16.0.3
 docker exec container_id ping 192.168.0.7
@@ -63,12 +64,14 @@ sudo docker run --privileged=true -id -e INSTALLER_TYPE=fuel -e INSTALLER_IP=10.
 ### Joid
 
 launch container
+
 ```bash:
 sudo docker run --privileged=true -id -e INSTALLER_TYPE=joid -e INSTALLER_IP=127.0.0.1    -e NODE_NAME=intel-pod6 -e DEPLOY_SCENARIO=os-onos-sfc-ha     -e BUILD_TAG=jenkins-functest-joid-baremetal-daily-master-81 -e CI_DEBUG=false -v /home/ubuntu/juju0710/joid/ci/admin-openrc:/home/opnfv/functest/conf/openstack.creds  -v /home/jenkins/opnfv/functest/results/master:/home/opnfv/functest/results   opnfv/functest:latest /bin/bash
 ```
 
 ### Compass
 launch container
+
 ```bash:
 sudo docker run --privileged=true -id -e INSTALLER_TYPE=compass -e INSTALLER_IP=127.0.0.1   -e NODE_NAME=huawei-pod1 -e DEPLOY_SCENARIO=os-onos-sfc-ha     -e BUILD_TAG=jenkins-functest-compass-baremetal-daily-master-120 -e CI_DEBUG=false   -v /home/jenkins/opnfv/functest/results/master:/home/opnfv/functest/results   opnfv/functest:latest /bin/bash
 ```
@@ -79,6 +82,7 @@ sudo docker run --privileged=true -id -e INSTALLER_TYPE=compass -e INSTALLER_IP=
 ssh 192.168.37.1 and get ip of eth0 for INSTALLER_IP
 
 * launch container with replaced INSTALLER_IP
+
 ```bash:
 sudo docker run --privileged=true -id -e INSTALLER_TYPE=apex -e INSTALLER_IP=192.168.122.87 -e NODE_NAME=lf-pod1 -e DEPLOY_SCENARIO=os-onos-sfc-ha     -e BUILD_TAG=jenkins-functest-apex-apex-daily-master-daily-master-70 -e CI_DEBUG=false  -v /root/.ssh/id_rsa:/root/.ssh/id_rsa -v /home/jenkins-ci/opnfv/functest/results/master:/home/opnfv/functest/results  -v /home/jenkins-ci/stackrc:/home/opnfv/functest/conf/stackrc opnfv/functest:latest /bin/bash
 ```
@@ -91,6 +95,7 @@ ExecStart=/bin/sh -c '/usr/bin/docker-current daemon -b br-public
 systemctl daemon-reload
 ```
 or 
+
 ```bash:
 vi /etc/sysconfig/docker
 ='--selinux-enabled --log-driver=journald -b br-public'
