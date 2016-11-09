@@ -80,6 +80,7 @@ sudo docker run --privileged=true -id -e INSTALLER_TYPE=compass -e INSTALLER_IP=
 ### Apex
 
 * get Installer IP  
+
 ssh 192.168.37.1 and get ip of eth0 for INSTALLER_IP
 
 * launch container with replaced INSTALLER_IP  
@@ -87,6 +88,7 @@ ssh 192.168.37.1 and get ip of eth0 for INSTALLER_IP
 ```bash:
 sudo docker run --privileged=true -id -e INSTALLER_TYPE=apex -e INSTALLER_IP=192.168.122.87 -e NODE_NAME=lf-pod1 -e DEPLOY_SCENARIO=os-onos-sfc-ha     -e BUILD_TAG=jenkins-functest-apex-apex-daily-master-daily-master-70 -e CI_DEBUG=false  -v /root/.ssh/id_rsa:/root/.ssh/id_rsa -v /home/jenkins-ci/opnfv/functest/results/master:/home/opnfv/functest/results  -v /home/jenkins-ci/stackrc:/home/opnfv/functest/conf/stackrc opnfv/functest:latest /bin/bash
 ```
+
 * check network connectivity  
 If 192.168.37.1 and 192.168.122.87 is unreachable, resolution:
 
