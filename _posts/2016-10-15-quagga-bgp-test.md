@@ -28,6 +28,7 @@ telnet localhost 2605
 ```
 
 查看配置：
+
 ```Bash:
 bgpd# show  running-config    
 
