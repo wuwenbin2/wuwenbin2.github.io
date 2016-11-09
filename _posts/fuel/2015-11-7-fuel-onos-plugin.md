@@ -25,40 +25,45 @@ This plugin will install [ Open Network Operating System (ONOS) controller](http
 
 ##ONOS plugin installation##
 
-* Log in Fuel Master and clone GIT repository of fuel-plugin-onos from openstack:    
+* Log in Fuel Master and clone GIT repository of fuel-plugin-onos from openstack:   
 
-        git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
+```bash:
+git clone -b Mitaka git://git.openstack.org/openstack/fuel-plugin-onos
+```
 
 * Preparing an environment for plugin development by three easy steps:   
 
     A. Install the standard Linux development tools.   
 
     For Ubuntu 14.04 LTS, run:
-
+    
         sudo apt-get install createrepo rpm dpkg-dev
-
+        
     For Centos 6.5, run:
 
         yum install createrepo rpm rpm-build dpkg-devel
 
-    B. Install the Fuel Plugin Builder. To do that, you should first get pip:   
+    B. Install the Fuel Plugin Builder. To do that, you should first get pip: 
 
         easy_install pip
-
-    C. Then, install Fuel Plugin Builder (fpb) itself:   
-
+        
+    C. Then, install Fuel Plugin Builder (fpb) itself:  
+    
         pip install fuel-plugin-builder
 
 * Build ONOS plugin for fuel:   
 
+```bash:
         fpb --build fuel-plugin-onos/
+```
 
 + The onos rpm will be built in the folder of fuel-plugin-onos.   
 
 + Install the onos plugin:   
 
+```bash:
         fuel plugins --install onos*.rpm
-
+```
 + Check if you successfully install the plugin:   
 
         fuel plugins
@@ -97,14 +102,13 @@ Notice: In case of version problems, the onos rpm uses jdk and onos packages tha
 
 ###Testing###
 
-1. Web UI is recommended for ONOS controller with tuitive information of topo, devices and etc.  
++ Web UI is recommended for ONOS controller with tuitive information of topo, devices and etc.  
 For that purpose, IP address of horizon should be ready, which can be found in fuel master after successful deployment. The web will run into the log page after inputing the path, username and password are both 'karaf'. Now enjot ONOS!
 
         Web UI: http://horizon_ip:8181/onos/ui
-        
-2. CLI is capable of more diverse functionality by running /opt/onos/bin/onos. More about CLI can be found in [The ONOS CLI](
-https://wiki.onosproject.org/display/ONOS/The+ONOS+CLI).  
 
++ CLI is capable of more diverse functionality by running /opt/onos/bin/onos. More about CLI can be found in [The ONOS CLI](
+https://wiki.onosproject.org/display/ONOS/The+ONOS+CLI).  
 
 ##Getting Involved##
 
